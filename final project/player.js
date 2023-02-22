@@ -1,5 +1,5 @@
 import { Sitting, Running, Jumping, Falling } from "./playerStates.js";
-
+//register to git
 export class Player{
     constructor(game){
         this.game = game;

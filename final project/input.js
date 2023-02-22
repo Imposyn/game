@@ -1,4 +1,5 @@
 export class InputHandler {
+    //register to git
     constructor(game){
         this.game = game;
         this.keys = [];

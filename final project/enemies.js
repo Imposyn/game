@@ -1,4 +1,5 @@
 class Enemy {
+    //register to git
     constructor(){
         this.frameX = 0;
         this.frameY = 0;

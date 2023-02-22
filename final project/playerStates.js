@@ -3,6 +3,7 @@ const states = {
     RUNNING: 1,
     JUMPING: 2,
     FALLING: 3,
+    //register to git
 }
 
 class State {

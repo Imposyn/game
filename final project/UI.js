@@ -1,4 +1,5 @@
 export class UI {
+    //register to git
     constructor(game){
         this.game = game;
         this.fontSize = 30;
