@@ -19,7 +19,7 @@ export class Dust extends Particle {
         this.y = y;
         this.speedX = Math.random();
         this.speedY = Math.random();
-        this.color = 'black';
+        this.color = 'rgba (0,0,0,0.2)';
     };
     draw(context){
         context.beginPath();
