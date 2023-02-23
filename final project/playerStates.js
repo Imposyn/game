@@ -119,7 +119,10 @@ export class Sitting extends State {
                         }
                         else if (this.game.player.onGround()){
                             this.game.player.setState(states.RUNNING, 1);
-                        } 
+                        } else if (InputDeviceInfo.includes('ArrowDown') && !this.game.player.onGround()){
+                            this.game.player.setState(states.DIVING,0)
+
+                        }
                     }
                 }
 

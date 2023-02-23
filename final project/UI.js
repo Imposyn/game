@@ -2,7 +2,8 @@ export class UI {
     constructor(game){
         this.game = game;
         this.fontSize = 30;
-        this.fontFamily = 'Helvetica';
+        this.fontFamily = 'Creepster';
+        this.heartImage = document.getElementById('heart');
     }
     draw(context){
         context.save();
@@ -19,11 +20,15 @@ export class UI {
         context.font = this.fontSize * 0.8 + ' px' + this.fontFamily;
         context.fillText('Time:  ' + (this.game.time * 0.001).toFixed(1),  20, 80);
         //toFixed tar bart alla decimaltal
+        //lives
+        for (let i = 0; i < this.game.heart; i++){
+            context.drawImage(this.heartImage, 25 * i + 20, 95, 25, 25);
+        }
         // game over message
         if (this.game.gameOver){
             context.textAlign = 'center';
             context.font = this.fontSize * 2 + 'px  ' + this.fontFamily;
-            if (this.game.score > 5){
+            if (this.game.score > this.game.winningScore){
                 context.fillText('Game over', this.game.width * 0.5, this.game.height * 0.5 - 20);
                 context.font = this.fontSize * 0.7 + 'px  ' + this.fontFamily;
                 context.fillText('GG, you win', this.game.width * 0.5, this.game.height * 0.5 + 20);
