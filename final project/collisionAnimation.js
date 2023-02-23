@@ -2,9 +2,9 @@ export class CollisionAnimation {
     constructor(game, x, y){
         this.game = game; 
         this.image = document.getElementById('collisionAnimation');
-        this.sprideWidth = 100;
-        this.spriteHeight = 90;
-        this.sizeModifier = Math.random() + 0.5;
+        this.sprideWidth = 200;
+        this.spriteHeight = 179;
+        this.sizeModifier = (Math.random() + 0.5)*0.7;
         this.width = this.sprideWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = x - this.width * 0.5;
